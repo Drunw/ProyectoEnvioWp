@@ -16,15 +16,15 @@ const container = new ContainerBuilder();
 /**
  * Inicamos servicio de WS / Bot / Twilio
  */
-container.register("ws.transporter", WsTransporter);
+container.register("ws.transporter", BaileysTransporter);
 const wsTransporter = container.get("ws.transporter");
 
-/*container.register("db.repository", MockRepository);
+container.register("db.repository", MockRepository);
 const dbRepository = container.get("db.repository");
 
 container
   .register("lead.creator", LeadCreate)
-  .addArgument([dbRepository, wsTransporter]);*/
+  .addArgument([dbRepository, wsTransporter]);
 
 const leadCreator = container.get("lead.creator");
 
