@@ -24,10 +24,10 @@ const dbRepository = container.get("db.repository");
 
 container
   .register("lead.creator", LeadCreate)
-  .addArgument([dbRepository, wsTransporter]);
+  .addArgument([dbRepository, wsTransporter]);*/
 
 const leadCreator = container.get("lead.creator");
 
-container.register("lead.ctrl", LeadCtrl).addArgument(leadCreator);*/
+container.register("lead.ctrl", LeadCtrl).addArgument(leadCreator);
 
 export default container;
